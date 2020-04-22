@@ -36,7 +36,7 @@ scale_fill_scpo <- function(...) { discrete_scale("fill", "scpo", scpo_palette()
 #' @examples
 #' library(scales)
 #' scales::show_col(tableau10()(10))
-tableau10 <- function() {manual_pal(values = c("#17becf","#bcbd22", "#7f7f7f","#e377c2","#8c564b","#9467bd","#d62728","#2ca02c","#ff7f0e","#1f77b4")) }
+tableau10 <- function() {manual_pal(values = c("#1f77b4", "#ff7f0e","#2ca02c","#d62728", "#9467bd", "#8c564b", "#8c564b", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf")) }
 
 #' Discrete color & fill scales based on the ipsum palette
 #'
@@ -124,7 +124,9 @@ scale_fill_tableau10_medium <- function(...) { discrete_scale("fill", "tableau10
 #' @examples
 #' library(scales)
 #' scales::show_col(tableau20()(20))
-tableau20 <- function() { manual_pal(values = c("#17becf","#bcbd22", "#7f7f7f","#e377c2","#8c564b","#9467bd","#d62728","#2ca02c","#ff7f0e","#1f77b4")) }
+tableau20 <- function() { manual_pal(values = c("#1F77B4", "#AEC7E8", "#FF7F0E", "#FFBB78","#2CA02C","#98DF8A","#D62728", "#FF9896", "#9467BD","#C5B0D5", "#8C564B", "#C49C94", "#E377C2", "#F7B6D2", "#7F7F7F", "#C7C7C7", "#BCBD22",  "#DBDB8D",  "#17BECF", "#9EDAE5"))}
+
+
 
 
 
@@ -762,3 +764,7 @@ scale_fill_rich6 <- scale_fill_rich6
 #' @export
 #' @rdname scale_rich6
 scale_fill_rich6 <- function(...) { discrete_scale("fill", "rich6", rich6(), ...) }
+
+
+
+
