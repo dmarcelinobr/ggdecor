@@ -1,0 +1,577 @@
+---
+title: "Aesthetic themes, scales and color palettes for using with `ggplot2` plots"
+author: "Daniel Marcelino <<dmarcelino@live.com>>"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output: 
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+create_dir: false
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  cache = FALSE,
+  fig.align = "center",
+  sanitize=TRUE
+)
+# <meta
+#  http-equiv="refresh"
+#  content="0; URL='http://danielmarcelino.github.io/SciencesPo/ggplot2_themes.html'"
+#/>
+```
+
+
+The R package `ggdecor` provides a collection of functions for analyzing elections and political behavior data, including measures of political fragmentation, seat apportionment, visualization aesthetic styles.
+
+
+Core themes:
+
+* `set_urbn_defaults()`
+* `theme_urbn_print()`
+* `theme_urbn_map()`
+
+Formatting functions:
+
+* `urbn_logo_text()`
+* `remove_ticks()`
+* `remove_axis()`
+* `scatter_grid()`
+* `add_axis()`
+* `urbn_geofacet`
+
+Utility functions:
+
+* `lato_test()`
+* `lato_install()`
+* `fontawesome_test()`
+* `fontawesome_install()`
+* `view_palette()`
+
+
+# Themes
+## Theme for publications (`theme_scpo`)
+
+```{r, fig.show='hold', fig.width = 6, fig.height = 4.5}
+ library(ggplot2)
+ library(ggdecor)
+ library(dplyr)
+
+
+ ggplot(mtcars, aes(mpg, wt)) +
+ geom_point() +
+ labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+        title="Seminal ggplot2 scatterplot example",
+        subtitle="A plot that is only useful for demonstration purposes",
+        caption="Brought to you by 'ggplot2'") +
+   theme_web()
+```
+
+
+
+```{r, fig.show='hold', fig.width = 6, fig.height = 4.5}
+#' # seminal bar chart#'
+ count(mpg, class) %>%
+   ggplot(aes(class, n)) +
+   geom_col() +
+   geom_text(aes(label=n), nudge_y=3) +
+   labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+        title="Seminal ggplot2 bar chart example",
+        subtitle="A plot that is only useful for demonstration purposes",
+        caption="Brought to you by 'ggplot2'") +
+     theme(axis.text.y=element_blank()) +
+   theme_web(grid="Y")
+```
+
+## Theme with roboto (`theme_roboto`)
+
+```{r,fig.show='hold', fig.width = 6, fig.height = 4.5}
+
+ ggplot(mtcars, aes(mpg, wt)) +
+ geom_point() +
+ labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+        title="Seminal ggplot2 scatterplot example",
+        subtitle="A plot that is only useful for demonstration purposes",
+        caption="Brought to you by 'ggplot2'") +
+   theme_roboto()
+```
+
+
+
+```{r, fig.show='hold', fig.width = 6, fig.height = 4.5}
+#' # seminal bar chart#'
+ count(mpg, class) %>%
+   ggplot(aes(class, n)) +
+   geom_col() +
+   geom_text(aes(label=n), nudge_y=3) +
+   labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+        title="Seminal ggplot2 bar chart example",
+        subtitle="A plot that is only useful for demonstration purposes",
+       caption="Brought to you by 'ggplot2'") +
+     theme(axis.text.y=element_blank()) +
+   theme_roboto(grid="Y")
+```
+
+
+
+
+## Theme with public sans (`theme_sans`)
+
+```{r, fig.show='hold',  fig.width = 6, fig.height = 4.5}
+
+
+ ggplot(mtcars, aes(mpg, wt)) +
+ geom_point() +
+ labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+        title="Seminal ggplot2 scatterplot example",
+        subtitle="A plot that is only useful for demonstration purposes",
+        caption="Brought to you by 'ggplot2'") +
+   theme_sans()
+```
+
+
+
+```{r, fig.show='hold', fig.width = 6, fig.height = 4.5}
+#' # seminal bar chart#'
+ count(mpg, class) %>%
+   ggplot(aes(class, n)) +
+   geom_col() +
+   geom_text(aes(label=n), nudge_y=3) +
+   labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+        title="Seminal ggplot2 bar chart example",
+        subtitle="A plot that is only useful for demonstration purposes",
+       caption="Brought to you by 'ggplot2'") +
+     theme(axis.text.y=element_blank()) +
+   theme_sans(grid="Y")
+```
+
+
+
+
+## Theme with xkcd font (`theme_xkcd`)
+
+```{r, fig.show='hold', fig.width = 6, fig.height = 4.5}
+
+
+ ggplot(mtcars, aes(mpg, wt)) +
+ geom_point() +
+ labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+        title="Seminal ggplot2 scatterplot example",
+        subtitle="A plot that is only useful for demonstration purposes",
+        caption="Brought to you by 'ggplot2'") +
+   theme_xkcd()
+```
+
+
+
+```{r, fig.show='hold', fig.width = 6, fig.height = 4.5}
+#' # seminal bar chart#'
+ count(mpg, class) %>%
+   ggplot(aes(class, n)) +
+   geom_col() +
+   geom_text(aes(label=n), nudge_y=3) +
+   labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+        title="Seminal ggplot2 bar chart example",
+        subtitle="A plot that is only useful for demonstration purposes",
+        caption="Brought to you by 'ggplot2'") +
+     theme(axis.text.y=element_blank()) +
+   theme_xkcd(grid="Y")
+```
+
+
+
+## Theme nero (`theme_nero`)
+
+```{r, fig.show='hold', fig.width = 6, fig.height = 4.5}
+
+ ggplot(mtcars, aes(mpg, wt)) +
+ geom_point(color = "tomato") +
+ labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+        title="Seminal ggplot2 scatterplot example",
+        subtitle="A plot that is only useful for demonstration purposes",
+        caption="Brought to you by 'ggplot2'") +
+   theme_nero()
+```
+
+
+
+```{r, fig.show='hold', fig.width = 6, fig.height = 4.5}
+#' # seminal bar chart#'
+ count(mpg, class) %>%
+   ggplot(aes(class, n)) +
+   geom_col() +
+   geom_text(aes(label=n), nudge_y=3) +
+   labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+        title="Seminal ggplot2 bar chart example",
+        subtitle="A plot that is only useful for demonstration purposes",
+        caption="Brought to you by 'ggplot2'") +
+     theme(axis.text.y=element_blank()) +
+   theme_nero(grid="Y")
+```
+
+
+
+## Theme Edward Tufte (`theme_nero`)
+
+```{r, fig.show='hold', fig.width = 6, fig.height = 4.5}
+
+p <- ggplot(mtcars, aes(mpg, wt)) +
+ geom_point(color = "tomato") +
+#  scale_y_continuous(breaks = extended_range_breaks()(mtcars$wt)) +
+#  scale_x_continuous(breaks = extended_range_breaks()(mtcars$mpg)) +
+ labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+        title="Seminal ggplot2 scatterplot example",
+        subtitle="A plot that is only useful for demonstration purposes",
+        caption="Brought to you by 'ggplot2'") 
+
+# p + geom_rangeframe() +
+#  theme_tufte()
+
+p + geom_rug() +
+ theme_tufte(ticks = FALSE)
+```
+
+
+p <- ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  scale_x_continuous(breaks = extended_range_breaks()(mtcars$wt)) +
+  scale_y_continuous(breaks = extended_range_breaks()(mtcars$mpg)) +
+  ggtitle("Cars")
+
+
+ 
+
+# Scales (Axis)
+
+## Percent
+
+```{r, fig.show='hold', fig.width = 6, fig.height = 4.5}
+#' # seminal bar chart#'
+ count(mpg, class) %>%
+  mutate(pct=n/sum(n)) %>% 
+   ggplot(aes(class, pct)) +
+   geom_col() +
+  scale_y_percent() +
+   labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+        title="Seminal ggplot2 bar chart example",
+        subtitle="A plot that is only useful for demonstration purposes",
+        caption="Brought to you by 'ggplot2'") +
+     theme(axis.text.y=element_blank()) +
+   theme_web(grid="Y")
+```
+
+
+
+## Comma
+
+```{r, fig.show='hold', fig.width = 6, fig.height = 4.5}
+
+#' # seminal bar chart#'
+ count(mpg, class) %>%
+  mutate(n=n*2000) %>% 
+  arrange(n) %>% 
+  mutate(class=factor(class, levels=class)) %>% 
+  ggplot(aes(class, n)) +
+   geom_col() +
+   geom_text(aes(label=scales::comma(n)), hjust=0, nudge_y=2000) +
+  scale_y_comma(limits=c(0,150000)) +
+  coord_flip() +
+   labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+        title="Seminal ggplot2 bar chart example",
+        subtitle="A plot that is only useful for demonstration purposes",
+        caption="Brought to you by 'ggplot2'") +
+     theme(axis.text.y=element_blank()) +
+   theme_web(grid="X")
+```
+
+
+## Branding
+
+```{r example2}
+library(ggplot2)
+library(ggdecor)
+library(grid)
+library(gridExtra)
+
+```
+
+
+
+# Scales (Color palettes)
+
+## SciencesPo palette
+
+```{r, fig.show='hold', fig.width = 6, fig.height = 4.5}
+library(ggplot2)
+library(scales)
+
+show_col(scpo_palette()(12))
+```
+
+## Classic 20 tons
+
+```{r, fig.show='hold', fig.width = 6, fig.height = 4.5}
+library(ggplot2)
+library(scales)
+
+show_col(classic()(20))
+```
+
+
+
+## Tableau palette
+
+```{r, fig.show='hold', fig.width = 6, fig.height = 4.5}
+library(ggplot2)
+library(scales)
+
+show_col(tableau20()(20))
+```
+
+
+```{r, fig.show='hold', fig.width = 6, fig.height = 4.5}
+show_col(tableau10()(10))
+```
+
+
+```{r, fig.show='hold', fig.width = 6, fig.height = 4.5}
+
+show_col(tableau10_light()(10))
+```
+
+
+```{r, fig.show='hold', fig.width = 6, fig.height = 4.5}
+show_col(tableau10_medium()(10))
+```
+
+
+## Theme web 10 and 20 tons
+
+```{r, fig.show='hold', fig.width = 6, fig.height = 4.5}
+library(ggplot2)
+library(scales)
+
+show_col(web10()(10))
+
+
+show_col(web20()(20))
+
+
+show_col(web20b()(20))
+
+
+show_col(web20c()(20))
+```
+
+
+
+
+## Theme labs 16 and 20 tons
+
+```{r, fig.show='hold', fig.width = 6, fig.height = 4.5}
+library(ggplot2)
+library(scales)
+
+show_col(labs16()(16))
+
+
+show_col(labs22()(22))
+
+```
+
+
+
+
+
+## Theme labs redfocus, greenfocus, and bluefocus
+
+```{r, fig.show='hold', fig.width = 6, fig.height = 4.5}
+library(ggplot2)
+library(scales)
+
+show_col(redfocus()(10))
+
+
+show_col(greenfocus()(10))
+
+
+show_col(bluefocus()(10))
+```
+
+
+
+
+## Theme labs rainbow 6, 8, 10, and 12,
+
+```{r, fig.show='hold', fig.width = 6, fig.height = 4.5}
+library(ggplot2)
+library(scales)
+
+show_col(rainbow6()(10))
+
+
+
+show_col(rainbow8()(10))
+
+
+show_col(rainbow10()(10))
+
+
+show_col(rainbow12()(12))
+```
+
+
+
+
+## Theme labs rich 6, 8, 10, and 12,
+
+```{r, fig.show='hold', fig.width = 6, fig.height = 4.5}
+library(ggplot2)
+library(scales)
+
+show_col(rich6()(10))
+
+
+
+show_col(rich8()(10))
+
+
+show_col(rich10()(10))
+
+
+show_col(rich12()(12))
+```
+
+
+
+```{r, eval=FALSE}
+
+name           value
+<chr>          <chr>
+  1 Black          #000000
+2 Orange         #E69F00
+3 Sky Blue       #56B4E9
+4 Bluish Green   #009E73
+5 Yellow         #F0E442
+6 Blue           #0072B2
+7 Vermillion     #D55E00
+8 Reddish Purple #CC79A7
+
+
+ggthemes_data$few
+$colors
+$colors$Light
+# A tibble: 9 x 2
+name   value
+<chr>  <chr>
+  1 Gray   #8C8C8C
+2 Blue   #88BDE6
+3 Orange #FBB258
+4 Green  #90CD97
+5 Pink   #F6AAC9
+6 Brown  #BFA554
+7 Purple #BC99C7
+8 Yellow #EDDD46
+9 Red    #F07E6E
+
+$colors$Medium
+# A tibble: 9 x 2
+name   value
+<chr>  <chr>
+  1 Gray   #4D4D4D
+2 Blue   #5DA5DA
+3 Orange #FAA43A
+4 Green  #60BD68
+5 Pink   #F17CB0
+6 Brown  #B2912F
+7 Purple #B276B2
+8 Yellow #DECF3F
+9 Red    #F15854
+
+$colors$Dark
+# A tibble: 9 x 2
+name   value
+<chr>  <chr>
+  1 Gray   #000000
+2 Blue   #265DAB
+3 Orange #DF5C24
+4 Green  #059748
+5 Pink   #E5126F
+6 Brown  #9D722A
+7 Purple #7B3A96
+8 Yellow #C7B42E
+9 Red    #CB2027
+
+
+$shapes
+# A tibble: 5 x 4
+name                         pch character unicode
+<chr>                      <int> <chr>     <chr>
+  1 WHITE CIRCLE                   1 ○         U+25CB
+2 WHITE SQUARE                   0 □         U+25A1
+3 WHITE UP-POINTING TRIANGLE     2 △         U+25B3
+4 PLUS SIGN                      3 +         U+002B
+5 MULTIPLICATION X               4 ✕         U+2715
+
+
+
+
+
+$shapes
+# A tibble: 13 x 4
+   name                          unicode character    pch
+   <chr>                         <chr>   <chr>      <int>
+ 1 BLACK SQUARE                  U+25A0  ■          -9632
+ 2 BLACK DIAMOND                 U+25C6  ◆          -9670
+ 3 BLACK DOWN-POINTING CHARACTER U+25BC  ▼          -9660
+ 4 BLACK UP-POINTING TRIANGLE    U+25B2  ▲          -9650
+ 5 BLACK RIGHT-POINTING TRIANGLE U+25B6  ▶          -9654
+ 6 BLACK LEFT-POINTING TRIANGLE  U+25C0  ◀          -9664
+ 7 BLACK BOWTIE                  U+29D3  ⧓         -10707
+ 8 BLACK HOURGLASS               U+29D7  ⧗         -10711
+ 9 BLACK CIRCLE                  U+25CF  ●          -9679
+10 BLACK FOUR POINTED STAR       U+2726  ✦         -10022
+11 MULTIPLICATION X              U+2715  ✕         -10005
+12 PLUS SIGN                     U+002B  +            -43
+13 ASTERISK OPERATOR             U+2217  ∗          -8727
+
+$colors
+# A tibble: 12 x 2
+   name     value  
+   <chr>    <chr>  
+ 1 Chart 1  #004586
+ 2 Chart 2  #ff420e
+ 3 Chart 3  #ffd320
+ 4 Chart 4  #579d1c
+ 5 Chart 5  #7e0021
+ 6 Chart 6  #83caff
+ 7 Chart 7  #314004
+ 8 Chart 8  #aecf00
+ 9 Chart 9  #4b1f6f
+10 Chart 10 #ff950e
+11 Chart 11 #c5000b
+12 Chart 12 #0084d1
+
+
+
+ggthemes_data$fivethirtyeight
+# A tibble: 6 x 2
+  name        value  
+  <chr>       <chr>  
+1 Dark Gray   #3C3C3C
+2 Medium Gray #D2D2D2
+3 Light Gray  #F0F0F0
+4 Red         #FF2700
+5 Blue        #008FD5
+6 Green       #77AB43
+
+```
+

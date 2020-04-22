@@ -1,0 +1,76 @@
+Package: ggdecor
+Type: Package
+Title: A Tool Set for Analyzing Political Behavior Data
+Date/Publication: 2013-08-27
+Version: 0.0.3
+Date: 2020-04-30
+Authors@R: person("Daniel", "Marcelino", email = "dmarcelino@live.com", role = c("aut", "cre"))
+Maintainer: Daniel Marcelino <dmarcelino@live.com>
+Description: Provides functions for analyzing elections and political behavior data, including measures of political fragmentation, seat apportionment, visualization aesthetic styles.
+URL: http://CRAN.R-project.org/package=SciencesPo
+License: GPL (>= 2)
+Encoding: UTF-8
+Depends:
+    R (>= 3.6.3),
+    stats,
+    utils,
+    graphics,
+    grDevices,
+    methods,
+    ggplot2 (>= 3.3.0),
+    scales (>= 1.1.0),
+    DT,
+    Hmisc
+Imports:
+    rlang (>= 0.4.5),
+    data.table (>= 1.9.4),
+    tidyselect (>= 1.0.0),
+    grid (>= 3.6.3),
+    dplyr (>= 0.8.3),
+    purrr (>= 0.3.3),
+    tibble (>= 3.0.0),
+    tidyr (>= 1.0.0),
+    pander (>= 0.6.3),
+    magrittr (>= 1.5),
+    stringi,
+    snakecase,
+    MASS,
+    rstudioapi,
+    htmltools,
+    lubridate (>= 1.7.4),
+    lazyeval,
+    readr,
+    stringr,
+    xtable,
+    ggrepel,
+    shiny (>= 1.4.0),
+    extrafont,
+    broom,
+    gridExtra
+Suggests:
+    devtools,
+    testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+LazyData: TRUE
+Repository: CRAN
+BugReports: http://github.com/danielmarcelino/ggdecor/issues
+ByteCompile: TRUE
+RoxygenNote: 7.1.0
+Collate:
+   ggdecor.R
+   aaa.R
+   theme_sans.R
+   theme_roboto.R
+   theme_xkcd.R
+   theme_web.R
+   theme_tufte.R
+   theme_utils.R
+   flush_ticks.R
+   geoms.R
+   theme_nero.R
+   scales.R
+   color.R
+   globals.R
+   fonts.R
