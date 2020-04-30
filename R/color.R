@@ -204,11 +204,12 @@ web20 <- function() {manual_pal(values = c("#1f77b4", "#aec7e8", "#ff7f0e", "#ff
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_web20
 #' @export
-scale_fill_web20 <- function(...) { discrete_scale("colour", "web20", web20(), ...) }
+scale_colour_web20 <- function(...) { discrete_scale("colour", "web20", web20(), ...) }
 
 #' @export
 #' @rdname scale_web20
-scale_fill_web20 <- scale_fill_web20
+scale_color_web20 <- scale_colour_web20
+
 
 #' @export
 #' @rdname scale_web20
@@ -236,11 +237,11 @@ web20b <- function() {manual_pal(values = c("#393b79", "#5254a3", "#6b6ecf", "#9
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_web20b
 #' @export
-scale_fill_web20b <- function(...) { discrete_scale("colour", "web20b", web20b(), ...) }
+scale_colour_web20b <- function(...) { discrete_scale("colour", "web20b", web20b(), ...) }
 
 #' @export
 #' @rdname scale_web20b
-scale_fill_web20b <- scale_fill_web20b
+scale_color_web20b <- scale_colour_web20b
 
 #' @export
 #' @rdname scale_web20b
@@ -268,11 +269,11 @@ web20c <- function() {manual_pal(values = c("#3182bd", "#6baed6", "#9ecae1", "#c
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_web20c
 #' @export
-  scale_fill_web20c <- function(...) { discrete_scale("colour", "web20c", web20c(), ...) }
+scale_colour_web20c <- function(...) { discrete_scale("colour", "web20c", web20c(), ...) }
 
 #' @export
 #' @rdname scale_web20c
-  scale_fill_web20c <- scale_fill_web20c
+scale_color_web20c <- scale_colour_web20c
 
 #' @export
 #' @rdname scale_web20c
@@ -300,11 +301,11 @@ web10 <- function() {manual_pal(values = c("#1f77b4", "#ff7f0e", "#2ca02c", "#d6
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_web10
 #' @export
-scale_fill_web10 <- function(...) { discrete_scale("colour", "web10", web10(), ...) }
+scale_colour_web10 <- function(...) { discrete_scale("colour", "web10", web10(), ...) }
 
 #' @export
 #' @rdname scale_web10
-scale_fill_web10 <- scale_fill_web10
+scale_color_web10 <- scale_colour_web10
 
 #' @export
 #' @rdname scale_web10
@@ -333,11 +334,11 @@ labs16 <- function() {manual_pal(values = c("#1f77b4","#ff7f0e","#2ca02c","#d627
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_labs16
 #' @export
-scale_fill_labs16 <- function(...) { discrete_scale("colour", "labs16", labs16(), ...) }
+scale_colour_labs16 <- function(...) { discrete_scale("colour", "labs16", labs16(), ...) }
 
 #' @export
 #' @rdname scale_labs16
-scale_fill_labs16<- scale_fill_labs16
+scale_color_labs16 <- scale_colour_labs16
 
 #' @export
 #' @rdname scale_labs16
@@ -366,11 +367,11 @@ labs22 <- function() {manual_pal(values = c("#0e4897","#17813f","#1d99b4","#1f9e
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_labs22
 #' @export
-scale_fill_labs22 <- function(...) { discrete_scale("colour", "labs22", labs22(), ...) }
+scale_colour_labs22 <- function(...) { discrete_scale("colour", "labs22", labs22(), ...) }
 
 #' @export
 #' @rdname scale_labs22
-scale_fill_labs22 <- scale_fill_labs22
+scale_color_labs22 <- scale_colour_labs22
 
 #' @export
 #' @rdname scale_labs22
@@ -400,11 +401,11 @@ redfocus <- function() {manual_pal(values = c("#CB181D","#252525","#525252","#73
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_redfocus
 #' @export
-scale_fill_redfocus <- function(...) { discrete_scale("colour", "redfocus", redfocus(), ...) }
+scale_colour_redfocus <- function(...) { discrete_scale("colour", "redfocus", redfocus(), ...) }
 
 #' @export
 #' @rdname scale_redfocus
-scale_fill_redfocus<- scale_fill_redfocus
+scale_color_redfocus<- scale_colour_redfocus
 
 #' @export
 #' @rdname scale_redfocus
@@ -437,11 +438,11 @@ greenfocus <- function() {manual_pal(values = c("#41AB5D","#252525","#525252","#
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_greenocus
 #' @export
-scale_fill_greenfocus <- function(...) { discrete_scale("colour", "greenfocus", greenfocus(), ...) }
+scale_colour_greenfocus <- function(...) { discrete_scale("colour", "greenfocus", greenfocus(), ...) }
 
 #' @export
 #' @rdname scale_greenfocus
-scale_fill_greenfocus<- scale_fill_greenfocus
+scale_color_greenfocus <- scale_colour_greenfocus
 
 #' @export
 #' @rdname scale_greenfocus
@@ -472,11 +473,11 @@ bluefocus <- function() {manual_pal(values = c("#0033FF","#252525","#525252","#7
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_bluefocus
 #' @export
-scale_fill_bluefocus <- function(...) { discrete_scale("colour", "bluefocus", bluefocus(), ...) }
+scale_colour_bluefocus <- function(...) { discrete_scale("colour", "bluefocus", bluefocus(), ...) }
 
 #' @export
 #' @rdname scale_bluefocus
-scale_fill_bluefocus <- scale_fill_bluefocus
+scale_color_bluefocus <-scale_colour_bluefocus
 
 #' @export
 #' @rdname scale_bluefocus
@@ -508,11 +509,11 @@ rainbow12 <- function() {manual_pal(values = c("#BF4D4D","#BF864D","#BFBF4D","#8
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_rainbow12
 #' @export
-scale_fill_rainbow12 <- function(...) { discrete_scale("colour", "rainbow12", rainbow12(), ...) }
+scale_colour_rainbow12 <- function(...) { discrete_scale("colour", "rainbow12", rainbow12(), ...) }
 
 #' @export
 #' @rdname scale_rainbow12
-scale_fill_rainbow12 <- scale_fill_rainbow12
+scale_color_rainbow12 <- scale_colour_rainbow12
 
 #' @export
 #' @rdname scale_rainbow12
@@ -543,11 +544,11 @@ rainbow10 <- function() {manual_pal(values = c("#BF4D4D","#BF914D","#A8BF4D","#6
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_rainbow10
 #' @export
-scale_fill_rainbow10 <- function(...) { discrete_scale("colour", "rainbow10", rainbow10(), ...) }
+scale_colour_rainbow10 <- function(...) { discrete_scale("colour", "rainbow10", rainbow10(), ...) }
 
 #' @export
 #' @rdname scale_rainbow10
-scale_fill_rainbow10 <- scale_fill_rainbow10
+scale_color_rainbow10 <- scale_colour_rainbow10
 
 #' @export
 #' @rdname scale_rainbow10
@@ -578,11 +579,11 @@ rainbow8 <- function() {manual_pal(values = c("#BF4D4D","#BFA34D","#86BF4D","#4D
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_rainbow8
 #' @export
-scale_fill_rainbow8 <- function(...) { discrete_scale("colour", "rainbow8", rainbow8(), ...) }
+scale_colour_rainbow8 <- function(...) { discrete_scale("colour", "rainbow8", rainbow8(), ...) }
 
 #' @export
 #' @rdname scale_rainbow8
-scale_fill_rainbow8 <- scale_fill_rainbow8
+scale_color_rainbow8 <- scale_colour_rainbow8
 
 #' @export
 #' @rdname scale_rainbow8
@@ -613,11 +614,11 @@ rainbow6 <- function() {manual_pal(values = c("#BF4D4D","#BFBF4D","#4DBF4D","#4D
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_rainbow6
 #' @export
-scale_fill_rainbow6 <- function(...) { discrete_scale("colour", "rainbow6", rainbow6(), ...) }
+scale_colour_rainbow6 <- function(...) { discrete_scale("colour", "rainbow6", rainbow6(), ...) }
 
 #' @export
 #' @rdname scale_rainbow6
-scale_fill_rainbow6 <- scale_fill_rainbow6
+scale_color_rainbow6 <- scale_colour_rainbow6
 
 #' @export
 #' @rdname scale_rainbow6
@@ -650,11 +651,11 @@ rich12 <- function() {manual_pal(values = c("#000040","#000093","#0020E9","#0076
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_rich12
 #' @export
-scale_fill_rich12 <- function(...) { discrete_scale("colour", "rich12", rich12(), ...) }
+scale_colour_rich12 <- function(...) { discrete_scale("colour", "rich12", rich12(), ...) }
 
 #' @export
 #' @rdname scale_rich12
-scale_fill_rich12 <- scale_fill_rich12
+scale_color_rich12 <- scale_colour_rich12
 
 #' @export
 #' @rdname scale_rich12
@@ -685,11 +686,11 @@ rich10 <- function() {manual_pal(values = c("#000041","#0000A9","#0049FF","#00A4
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_rich10
 #' @export
-scale_fill_rich10 <- function(...) { discrete_scale("colour", "rich10", rich10(), ...) }
+scale_colour_rich10 <- function(...) { discrete_scale("colour", "rich10", rich10(), ...) }
 
 #' @export
 #' @rdname scale_rich10
-scale_fill_rainbow10 <- scale_fill_rainbow10
+scale_color_rainbow10 <- scale_colour_rainbow10
 
 #' @export
 #' @rdname scale_rich10
@@ -720,11 +721,11 @@ rich8 <- function() {manual_pal(values = c("#000041","#0000CB","#0081FF","#02DA8
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_rich8
 #' @export
-scale_fill_rich8 <- function(...) { discrete_scale("colour", "rich8", rich8(), ...) }
+scale_colour_rich8 <- function(...) { discrete_scale("colour", "rich8", rich8(), ...) }
 
 #' @export
 #' @rdname scale_rich8
-scale_fill_rich8 <- scale_fill_rich8
+scale_color_rich8 <- scale_colour_rich8
 
 #' @export
 #' @rdname scale_rich8
@@ -755,11 +756,11 @@ rich6 <- function() {manual_pal(values = c("#000043","#0033FF","#01CCA4","#BAFF1
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_rich6
 #' @export
-scale_fill_rich6 <- function(...) { discrete_scale("colour", "rich6", rich6(), ...) }
+scale_colour_rich6 <- function(...) { discrete_scale("colour", "rich6", rich6(), ...) }
 
 #' @export
 #' @rdname scale_rich6
-scale_fill_rich6 <- scale_fill_rich6
+scale_color_rich6 <- scale_colour_rich6
 
 #' @export
 #' @rdname scale_rich6
@@ -768,3 +769,181 @@ scale_fill_rich6 <- function(...) { discrete_scale("fill", "rich6", rich6(), ...
 
 
 
+
+
+
+#'  Theme labs redmono 8 colors palette
+#'
+#' @export
+#' @importFrom scales manual_pal
+#' @examples
+#' library(scales)
+#' scales::show_col(redmono()(8))
+
+redmono <- function() {manual_pal(values = c("#99000D","#CB181D","#EF3B2C","#FB6A4A","#FC9272","#FCBBA1","#FEE0D2","#FFF5F0"))}
+
+
+
+
+
+
+#' Discrete color & fill scales based on the redmono 8 palette
+#'
+#' See [redmono]().
+#'
+#' @md
+#' @inheritDotParams ggplot2::discrete_scale -expand -position
+#' @rdname scale_redmono
+#' @export
+scale_colour_redmono <- function(...) { discrete_scale("colour", "redmono", redmono(), ...) }
+
+#' @export
+#' @rdname scale_redmono
+scale_color_redmono <- scale_colour_redmono
+
+#' @export
+#' @rdname scale_redmono
+scale_fill_redmono <- function(...) { discrete_scale("fill", "redmono", redmono(), ...) }
+
+
+
+
+
+
+
+#'  Theme labs greenmono 8 colors palette
+#'
+#' @export
+#' @importFrom scales manual_pal
+#' @examples
+#' library(scales)
+#' scales::show_col(greenmono()(8))
+
+greenmono <- function() {manual_pal(values = c("#005A32","#238B45","#41AB5D","#74C476","#A1D99B","#C7E9C0","#E5F5E0","#F7FCF5"))}
+
+
+
+
+#' Discrete color & fill scales based on the greenmono 8 palette
+#'
+#' See [greenmono]().
+#'
+#' @md
+#' @inheritDotParams ggplot2::discrete_scale -expand -position
+#' @rdname scale_greenmono
+#' @export
+scale_colour_greenmono <- function(...) { discrete_scale("colour", "greenmono", greenmono(), ...) }
+
+#' @export
+#' @rdname scale_greenmono
+scale_color_greenmono <- scale_colour_greenmono
+
+#' @export
+#' @rdname scale_greenmono
+scale_fill_greenmono <- function(...) { discrete_scale("fill", "greenmono", greenmono(), ...) }
+
+
+
+
+
+#'  Theme labs bluemono 8 colors palette
+#'
+#' @export
+#' @importFrom scales manual_pal
+#' @examples
+#' library(scales)
+#' scales::show_col(bluemono()(8))
+
+bluemono<- function() {manual_pal(values = c("#084594","#2171B5","#4292C6","#6BAED6","#9ECAE1","#C6DBEF","#DEEBF7","#F7FBFF"))}
+
+
+
+#' Discrete color & fill scales based on the bluemono 8 palette
+#'
+#' See [bluemono]().
+#'
+#' @md
+#' @inheritDotParams ggplot2::discrete_scale -expand -position
+#' @rdname scale_bluemono
+#' @export
+scale_colour_bluemono <- function(...) { discrete_scale("colour", "bluemono", bluemono(), ...) }
+
+#' @export
+#' @rdname scale_bluemono
+scale_color_bluemono <- scale_colour_bluemono
+
+#' @export
+#' @rdname scale_bluemono
+scale_fill_bluemono <- function(...) { discrete_scale("fill", "bluemono", bluemono(), ...) }
+
+
+
+
+
+
+#'  Theme labs greymono 8 colors palette
+#'
+#' @export
+#' @importFrom scales manual_pal
+#' @examples
+#' library(scales)
+#' scales::show_col(greymono()(8))
+
+greymono <- function() {manual_pal(values = c("#000000","#252525","#525252","#737373","#969696","#BDBDBD","#D9D9D9","#F0F0F0"))}
+
+
+
+#' Discrete color & fill scales based on the greymono 8 palette
+#'
+#' See [greymono]().
+#'
+#' @md
+#' @inheritDotParams ggplot2::discrete_scale -expand -position
+#' @rdname scale_greymono
+#' @export
+scale_colour_greymono <- function(...) { discrete_scale("colour", "greymono", greymono(), ...) }
+
+#' @export
+#' @rdname scale_greymono
+scale_color_greymono <- scale_colour_greymono
+
+#' @export
+#' @rdname scale_greymono
+scale_fill_greymono <- function(...) { discrete_scale("fill", "greymono", greymono(), ...) }
+NULL
+
+
+
+
+
+
+
+#'  Theme labs R4 8 colors palette
+#'
+#' @export
+#' @importFrom scales manual_pal
+#' @examples
+#' library(scales)
+#' scales::show_col(R4()(8))
+
+R4 <- function() {manual_pal(values = c("#000000","#DF536B", "#61D04F", "#2297E6", "#28E2E5", "#CD0BBC", "#F5C710", "#9E9E9E"))}
+
+
+
+#' Discrete color & fill scales based on the R4 8 palette
+#'
+#' See [R4]().
+#'
+#' @md
+#' @inheritDotParams ggplot2::discrete_scale -expand -position
+#' @rdname scale_R4
+#' @export
+scale_colour_R4 <- function(...) { discrete_scale("colour", "R4", R4(), ...) }
+
+#' @export
+#' @rdname scale_R4
+scale_color_R4 <- scale_colour_R4
+
+#' @export
+#' @rdname scale_R4
+scale_fill_R4 <- function(...) { discrete_scale("fill", "R4", R4(), ...) }

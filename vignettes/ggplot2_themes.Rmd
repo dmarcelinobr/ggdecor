@@ -440,7 +440,6 @@ library(scales)
 show_col(rich6()(10))
 
 
-
 show_col(rich8()(10))
 
 
@@ -449,6 +448,29 @@ show_col(rich10()(10))
 
 show_col(rich12()(12))
 ```
+
+
+
+
+
+## Theme labs colormono 8 colors palette
+
+```{r, fig.show='hold', fig.width = 6, fig.height = 4.5}
+library(ggplot2)
+library(scales)
+
+show_col(redmono()(8))
+
+
+show_col(greenmono()(8))
+
+
+show_col(bluemono()(8))
+
+
+show_col(greymono()(8))
+```
+
 
 
 
