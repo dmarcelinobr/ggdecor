@@ -1,3 +1,7 @@
+"%||%" <- function(a, b) {
+  if (!is.null(a)) a else b
+}
+
 # Imports from magrittr
 
 #' @importFrom magrittr %>%

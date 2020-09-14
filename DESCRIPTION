@@ -1,9 +1,8 @@
 Package: ggdecor
 Type: Package
-Title: A Tool Set for Analyzing Political Behavior Data
-Date/Publication: 2013-08-27
+Title: A Collection of Themes and Aesthetics
 Version: 0.0.3
-Date: 2020-04-30
+Date: 2020-09-15
 Authors@R: person("Daniel", "Marcelino", email = "dmarcelino@live.com", role = c("aut", "cre"))
 Maintainer: Daniel Marcelino <dmarcelino@live.com>
 Description: Provides functions for analyzing elections and political behavior data, including measures of political fragmentation, seat apportionment, visualization aesthetic styles.
@@ -11,7 +10,7 @@ URL: http://CRAN.R-project.org/package=SciencesPo
 License: GPL (>= 2)
 Encoding: UTF-8
 Depends:
-    R (>= 3.6.3),
+    R (>= 4.0.0),
     stats,
     utils,
     graphics,
@@ -57,7 +56,7 @@ LazyData: TRUE
 Repository: CRAN
 BugReports: http://github.com/danielmarcelino/ggdecor/issues
 ByteCompile: TRUE
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 Collate:
    ggdecor.R
    aaa.R

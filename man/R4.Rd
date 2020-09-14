@@ -11,5 +11,5 @@ Theme labs R4 8 colors palette
 }
 \examples{
 library(scales)
-scales::show_col(R4()(8))
+scales::show_col(R4()(9))
 }

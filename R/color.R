@@ -924,7 +924,7 @@ NULL
 #' @importFrom scales manual_pal
 #' @examples
 #' library(scales)
-#' scales::show_col(R4()(8))
+#' scales::show_col(R4()(9))
 
 R4 <- function() {manual_pal(values = c("#000000","#DF536B", "#61D04F", "#2297E6", "#28E2E5", "#CD0BBC", "#F5C710", "#9E9E9E"))}
 
